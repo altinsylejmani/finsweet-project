@@ -1,0 +1,72 @@
+@use "reset";
+@use "typography";
+
+$general: #1d2130;
+$white: #fff;
+$secondary: #525560;
+$green-button: #70c174;
+$m-center: 0 auto;
+
+:root {
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+h2 {
+  font-size: 6.4rem;
+  color: $white;
+}
+
+%inner-wrapper {
+  width: 117rem;
+  margin: $m-center;
+}
+
+.home__nav {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &--content {
+    gap: 40px;
+    display: flex;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      font-size: 1.6rem;
+      color: $secondary;
+    }
+    :last-child {
+      align-items: center;
+      padding: 12px 32px;
+      background-color: $general;
+      color: $white;
+      border-radius: 4px;
+    }
+  }
+}
+
+.Content {
+  display: flex;
+  border: 1px solid blue;
+  align-items: center;
+  .home-picture {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  Main-text {
+    position: absolute;
+    color: black;
+    font-size: 6.4rem;
+  }
+  &--earth {
+    position: absolute;
+    display: flex;
+  }
+}
