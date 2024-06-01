@@ -1,10 +1,11 @@
-@use "reset";
 @use "typography";
 
 $general: #1d2130;
 $white: #fff;
 $secondary: #525560;
 $green-button: #70c174;
+$green-square: #83d187;
+$long-line: #e5e5e5;
 $m-center: 0 auto;
 
 :root {
@@ -16,13 +17,41 @@ $m-center: 0 auto;
   font-variation-settings: "wdth" 100;
 }
 h2 {
-  font-size: 6.4rem;
+  font-size: 4.8rem;
+  color: $general;
+}
+.white-button {
+  color: $general;
+  text-decoration: none;
+  font-size: 1.6rem;
+  padding: 16px 32px;
+  background: $white;
+  border-radius: 4px;
+}
+
+.green-button {
   color: $white;
+  text-decoration: none;
+  font-size: 1.6rem;
+  padding: 16px 32px;
+  background: $green-button;
+  border: transparent;
+  border-radius: 4px;
 }
 
 %inner-wrapper {
   width: 117rem;
   margin: $m-center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 89px;
+}
+
+.home {
 }
 
 .home__nav {
@@ -51,22 +80,192 @@ h2 {
   }
 }
 
-.Content {
+.home-picture {
   display: flex;
-  border: 1px solid blue;
+  justify-content: center;
+  margin-top: 0px;
+  display: flex;
+  border: 5px blue;
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  .Content {
+    border-image-width: auto;
+    width: 0 auto;
+    display: flex;
+    border: 1px solid rgb(67, 67, 223);
+    align-items: center;
+    justify-content: center;
+
+    p {
+      color: $white;
+      font-size: 6.4rem;
+    }
+
+    &--earth {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transform: translateX(-54%);
+      margin-bottom: 195px;
+
+      @media screen and (max-width: 1550px) {
+        margin-left: 200px;
+      }
+      @media screen and (max-width: 1550px) {
+        margin-left: 200px;
+      }
+
+      .Content__earth__click {
+        display: flex;
+        align-items: flex-end;
+
+        &--1 {
+        }
+        &--2 {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          background-color: transparent;
+          border: transparent;
+          color: $white;
+          font-size: 1.6rem;
+          padding: 12px 16px;
+
+          img {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .stats {
+    position: absolute;
+    top: 730px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    font-size: 1.8rem;
+
+    h4 {
+      color: $white;
+    }
+
+    &--line {
+      width: 861px;
+      height: 1px;
+      color: $white;
+      background: $white;
+    }
+  }
+}
+
+.information {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  margin-top: 96px;
+  margin-bottom: 64px;
+
+  stats-line {
+    color: black;
+    width: 10px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+.long-line {
+  background: black;
+  width: 1094px;
+  height: 2px;
+}
+
+.text-line {
+  background: black;
+  width: 72px;
+  height: 2px;
+}
+.test {
+  gap: 24px;
+  margin-left: -100px;
+  display: flex;
   align-items: center;
-  .home-picture {
-    margin-top: 0px;
+  position: relative;
+}
+.long-line {
+  background-color: $long-line;
+  height: 1px;
+  width: 89%;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2.55rem;
+}
+
+button {
+  margin-top: 48px;
+}
+.wrapper-2 {
+  display: flex;
+  gap: 96px;
+}
+test1 {
+  gap: 96px;
+}
+img {
+  gap: 96px;
+}
+.logos {
+  gap: 96px;
+  display: flex;
+}
+
+.services {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #eff7f2;
+
+  h4 {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+  .green-square {
+    background-color: $green-square;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 24px;
   }
-  Main-text {
-    position: absolute;
-    color: black;
-    font-size: 6.4rem;
+  p {
+    margin-bottom: 0px;
   }
-  &--earth {
-    position: absolute;
+  .last-p {
+    margin-bottom: 16px;
+  }
+
+  .services-flex {
     display: flex;
+    align-items: flex-end;
+  }
+  .logo-h4 {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
   }
 }
