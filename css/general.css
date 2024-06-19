@@ -89,7 +89,6 @@ p {
 }
 
 .information, .home--section .Content .image .center--text .stats, .home {
-  border: 5px red;
   margin-left: auto;
   margin-right: auto;
 }
@@ -97,7 +96,6 @@ p {
 .wrapper {
   display: flex;
   flex-direction: column;
-  border: 1px solid blue;
 }
 
 .home__nav {
@@ -111,6 +109,9 @@ p {
   gap: 40px;
   display: flex;
   align-items: center;
+}
+.home__nav--content :nth-child(1) {
+  color: black;
 }
 .home__nav--content a {
   text-decoration: none;
@@ -299,6 +300,9 @@ test1 {
 img {
   gap: 96px;
 }
+img :hover {
+  cursor: pointer;
+}
 
 .logos {
   gap: 96px;
@@ -481,6 +485,10 @@ img {
   align-items: center;
   gap: 230px;
 }
+.Donations .black__content p {
+  color: white;
+  opacity: 80%;
+}
 @media screen and (max-width: 1300px) {
   .Donations .black__content {
     gap: 20px;
@@ -540,7 +548,7 @@ img {
   width: 375px;
   height: 375px;
 }
-@media screen and (max-width: 1410px) {
+@media screen and (max-width: 1300px) {
   .Donations img {
     width: 300px;
     height: 300px;
