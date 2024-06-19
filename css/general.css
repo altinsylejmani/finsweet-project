@@ -17,6 +17,10 @@
   font-style: normal;
 }
 
+body {
+  margin: 0;
+}
+
 :root {
   font-size: 10px;
   font-family: "Open Sans", sans-serif;
@@ -144,7 +148,6 @@ p {
   width: 100%;
 }
 .home--section .Content .image .center--text {
-  border: 5px solid blue;
   padding-top: 128px;
   width: 1304px;
   display: flex;
@@ -584,13 +587,13 @@ img {
 }
 @media screen and (max-width: 1348px) {
   .contribute__shadow {
-    width: 98.5%;
+    width: 98%;
     border-radius: 12px;
   }
 }
 @media screen and (max-width: 1348px) {
   .contribute {
-    width: 100%;
+    width: 98%;
     border-radius: 12px;
   }
 }
@@ -611,6 +614,11 @@ img {
   width: 981px;
   height: 1px;
 }
+@media screen and (max-width: 1440px) {
+  .news .header .long-line {
+    width: 326px;
+  }
+}
 .news .news__articles {
   display: flex;
   justify-content: center;
@@ -625,9 +633,10 @@ img {
 }
 @media screen and (max-width: 1440px) {
   .news .news__articles {
-    width: 940px;
-    display: flex;
     margin: 0 auto;
+    width: 800px;
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
   }
 }
@@ -639,6 +648,11 @@ img {
   gap: 24px;
   cursor: pointer;
 }
+@media screen and (max-width: 1377px) {
+  .event .header {
+    flex-wrap: wrap;
+  }
+}
 .event .header .roboto-medium {
   font-size: 4rem;
 }
@@ -646,12 +660,17 @@ img {
   width: 1062px;
   height: 1px;
 }
+@media screen and (max-width: 1377px) {
+  .event .header .long-line {
+    width: 390px;
+  }
+}
 .event--wrapper {
   display: flex;
   justify-content: center;
   gap: 24px;
 }
-@media screen and (max-width: 1348px) {
+@media screen and (max-width: 1377px) {
   .event--wrapper {
     flex-wrap: wrap;
   }
@@ -761,8 +780,14 @@ img {
   line-height: 140%;
   margin-top: 0;
 }
+.footer .footer--wrapper p :hover {
+  text-decoration: none;
+}
 .footer .footer--wrapper ul {
   padding-left: 0;
+}
+.footer .footer--wrapper ul :hover {
+  text-decoration: underline;
 }
 .footer .footer--wrapper ul li {
   margin-left: 0px;
@@ -777,6 +802,8 @@ img {
   display: flex;
 }
 .footer .Subscribe .Subscribe__email .email {
+  font-size: 2rem;
+  padding-left: 10px;
   width: 456px;
   height: 64px;
   border-radius: 4px;
@@ -784,6 +811,10 @@ img {
   border: 1px solid rgba(235, 240, 249, 0.3);
   border-right: transparent;
   width: 456px;
+  color: white;
+}
+.footer .Subscribe .Subscribe__email .email :focus {
+  padding: 1px;
 }
 .footer .Subscribe .Subscribe__email button {
   margin-top: 0;

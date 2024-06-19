@@ -8,6 +8,10 @@ $Green-secondary: #bef3c0;
 $green-square: #83d187;
 $long-line: #e5e5e5;
 
+body {
+  margin: 0;
+}
+
 :root {
   font-size: 10px;
   font-family: "Open Sans", sans-serif;
@@ -134,7 +138,6 @@ p {
       background-size: cover;
       width: 100%;
       .center--text {
-        border: 5px solid blue;
         padding-top: 128px;
         width: 1304px;
         display: flex;
@@ -602,13 +605,13 @@ img {
     height: 384px;
     z-index: 0;
     @media screen and (max-width: 1348px) {
-      width: 98.5%;
+      width: 98%;
       border-radius: 12px;
     }
   }
 
   @media screen and (max-width: 1348px) {
-    width: 100%;
+    width: 98%;
     border-radius: 12px;
   }
 }
@@ -629,6 +632,10 @@ img {
     .long-line {
       width: 981px;
       height: 1px;
+
+      @media screen and (max-width: 1440px) {
+        width: 326px;
+      }
     }
   }
   .news__articles {
@@ -644,9 +651,10 @@ img {
     }
 
     @media screen and (max-width: 1440px) {
-      width: 940px;
-      display: flex;
       margin: 0 auto;
+      width: 800px;
+      display: flex;
+      justify-content: center;
       flex-wrap: wrap;
     }
   }
@@ -660,6 +668,10 @@ img {
     gap: 24px;
     cursor: pointer;
 
+    @media screen and (max-width: 1377px) {
+      flex-wrap: wrap;
+    }
+
     .roboto-medium {
       font-size: 4rem;
     }
@@ -667,6 +679,10 @@ img {
     .long-line {
       width: 1062px;
       height: 1px;
+
+      @media screen and (max-width: 1377px) {
+        width: 390px;
+      }
     }
   }
 
@@ -675,7 +691,7 @@ img {
     justify-content: center;
     gap: 24px;
 
-    @media screen and (max-width: 1348px) {
+    @media screen and (max-width: 1377px) {
       flex-wrap: wrap;
     }
   }
@@ -687,6 +703,7 @@ img {
     border-radius: 8px;
     display: flex;
     gap: 24px;
+
     .date {
       margin-left: 40px;
       h2 {
@@ -775,20 +792,29 @@ img {
       margin-top: 0px;
       color: $white;
     }
+
     a {
       color: $white;
       text-decoration: none;
       font-size: 1.4rem;
       opacity: 78%;
     }
+
     p {
       color: $white;
       font-size: 1.6rem;
       line-height: 140%;
       margin-top: 0;
+      :hover {
+        text-decoration: none;
+      }
     }
+
     ul {
       padding-left: 0;
+      :hover {
+        text-decoration: underline;
+      }
 
       li {
         margin-left: 0px;
@@ -807,6 +833,8 @@ img {
       display: flex;
 
       .email {
+        font-size: 2rem;
+        padding-left: 10px;
         width: 456px;
         height: 64px;
         border-radius: 4px;
@@ -814,6 +842,10 @@ img {
         border: 1px solid rgb(235, 240, 249, 0.3);
         border-right: transparent;
         width: 456px;
+        color: white;
+        :focus {
+          padding: 1px;
+        }
       }
 
       button {
