@@ -92,13 +92,34 @@ p {
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 561px;
+
+  @media screen and (max-width: 1410px) {
+    justify-content: space-around;
+    gap: 0px;
+  }
+
+  @media screen and (max-width: 860px) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+  }
 
   &--content {
     gap: 40px;
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 640px) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+    }
 
     :nth-child(1) {
       color: black;
@@ -147,9 +168,17 @@ p {
         display: flex;
         margin: 0 auto;
         @media screen and (max-width: 1410px) {
-          width: 1004px;
-          width: 95%;
+          width: 76%;
           justify-content: center;
+        }
+
+        @media screen and (max-width: 1310px) {
+          width: 76%;
+          justify-content: center;
+        }
+
+        @media screen and (max-width: 400px) {
+          text-align: center;
         }
 
         .button {
@@ -167,16 +196,40 @@ p {
           margin-top: 128px;
           margin-top: 124px;
           display: flex;
+
+          &__earth {
+            @media screen and (max-width: 400px) {
+              width: 350px;
+
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+            }
+          }
         }
         p {
           margin-top: 0;
           color: $white;
           font-size: 6.4rem;
           line-height: 76px;
+
+          @media screen and (max-width: 820px) {
+            font-size: 5rem;
+            width: 489px;
+          }
+
+          @media screen and (max-width: 400px) {
+            width: 360px;
+          }
         }
         .Content__earth--click {
           display: flex;
           gap: 24px;
+
+          @media screen and (max-width: 400px) {
+            justify-content: center;
+          }
 
           .button {
             cursor: pointer;
@@ -192,9 +245,17 @@ p {
           align-items: center;
           font-size: 1.8rem;
 
+          @media screen and (max-width: 400px) {
+            width: 350px;
+          }
+
           h4 {
             color: $white;
             font-size: 1.8rem;
+
+            @media screen and (max-width: 1288px) {
+              width: 64px;
+            }
           }
 
           &--line {
@@ -202,6 +263,10 @@ p {
             height: 1px;
             @media screen and (max-width: 1350px) {
               width: 561px;
+
+              @media screen and (max-width: 820px) {
+                width: 200px;
+              }
             }
 
             background: $white;
@@ -220,6 +285,10 @@ p {
   margin-top: 96px;
   margin-bottom: 64px;
 
+  @media screen and (max-width: 400px) {
+    width: 300px;
+  }
+
   .things3 {
     display: flex;
     flex-direction: column;
@@ -228,10 +297,37 @@ p {
     .article--p {
       margin-bottom: 48px;
     }
+
+    @media screen and (max-width: 400px) {
+      img {
+        width: 350px;
+      }
+    }
+
+    .wrapper-2 {
+      article {
+        @media screen and (max-width: 1300px) {
+          width: 300px;
+          margin: auto;
+        }
+      }
+    }
   }
 
   figure {
     margin-left: 0;
+
+    @media screen and (max-width: 1410px) {
+      margin-left: 40px;
+    }
+
+    @media screen and (max-width: 500px) {
+      margin: auto;
+
+      img {
+        width: 350px;
+      }
+    }
   }
 
   stats-line {
@@ -288,7 +384,7 @@ button {
 .wrapper-2 {
   display: flex;
   gap: 96px;
-  @media screen and (max-width: 1348px) {
+  @media screen and (max-width: 1410px) {
     display: flex;
     gap: 0;
     flex-direction: column-reverse;
@@ -302,13 +398,25 @@ img {
 
   :hover {
     cursor: pointer;
+
+    @media screen and (max-width: 400px) {
+      width: 350px;
+    }
   }
 }
 .logos {
   gap: 96px;
   display: flex;
-  @media screen and (max-width: 1350px) {
+  @media screen and (max-width: 1410px) {
     width: 628px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 134px;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -324,11 +432,26 @@ img {
 
   figure {
     margin-left: 0;
+
+    @media screen and (max-width: 400px) {
+      margin: auto;
+      img {
+        width: 350px;
+        margin: auto;
+      }
+    }
   }
   h4 {
     color: $general;
     font-size: 20px;
     margin-bottom: 0px;
+  }
+
+  h2 {
+    @media screen and (max-width: 500px) {
+      margin: auto;
+      width: 345px;
+    }
   }
   .green-square {
     @extend %m-square;
@@ -353,6 +476,10 @@ img {
     @media screen and (max-width: 1410px) {
       display: flex;
       flex-direction: column-reverse;
+    }
+
+    @media screen and (max-width: 400px) {
+      width: 300px;
     }
     .square-and-text {
       border-left: 1px solid #e5e5e5;
@@ -396,9 +523,12 @@ img {
     height: 421px;
     background: black;
     opacity: 50%;
-
     z-index: 0;
     border-radius: 12px;
+
+    @media screen and (max-width: 400px) {
+      width: 350px;
+    }
   }
   h2 {
     margin-left: 109px;
@@ -424,6 +554,10 @@ img {
         margin-left: 48px;
         position: absolute;
 
+        @media screen and (max-width: 500px) {
+          margin-left: 30px;
+        }
+
         p {
           color: white;
           margin-bottom: 64px;
@@ -446,6 +580,10 @@ img {
     width: 411px;
     height: 421px;
     border-radius: 12px;
+
+    @media screen and (max-width: 400px) {
+      width: 350px;
+    }
   }
 
   .city--image {
@@ -457,6 +595,10 @@ img {
     width: 411px;
     height: 421px;
     border-radius: 12px;
+
+    @media screen and (max-width: 400px) {
+      width: 350px;
+    }
     .shadow--block {
       width: 411px;
       height: 421px;
@@ -477,6 +619,10 @@ img {
     width: 411px;
     height: 421px;
     border-radius: 12px;
+
+    @media screen and (max-width: 400px) {
+      width: 350px;
+    }
   }
 }
 
@@ -505,6 +651,11 @@ img {
 
       @media screen and (max-width: 1300px) {
         gap: 20px;
+
+        @media screen and (max-width: 400px) {
+          text-align: center;
+          width: 350px;
+        }
 
         h2 {
           font-size: 3rem;
@@ -538,6 +689,10 @@ img {
       .helping {
         @extend %s-square;
         background-color: #fff0ca;
+      }
+
+      @media screen {
+        max-width: 400px;
       }
     }
     .spending--2 {
@@ -573,7 +728,10 @@ img {
     @media screen and (max-width: 1300px) {
       width: 300px;
       height: 300px;
-      margin-right: 35px;
+
+      @media screen and (max-width: 800px) {
+        width: 0;
+      }
     }
   }
 }
@@ -594,6 +752,15 @@ img {
 
   h2 {
     margin-top: 0;
+
+    @media screen and (max-width: 660px) {
+      font-size: 3.5rem;
+    }
+
+    @media screen and (max-width: 370px) {
+      font-size: 3rem;
+      text-align: center;
+    }
   }
 
   &__content {
@@ -603,6 +770,9 @@ img {
     align-items: center;
     z-index: 1;
     flex-direction: column;
+    @media screen and (max-width: 400px) {
+      text-align: center;
+    }
 
     &--buttons {
       gap: 32px;
@@ -641,6 +811,10 @@ img {
     gap: 24px;
     .roboto-medium {
       font-size: 4rem;
+
+      @media screen and (max-width: 605px) {
+        width: 170px;
+      }
     }
 
     .long-line {
@@ -649,6 +823,10 @@ img {
 
       @media screen and (max-width: 1440px) {
         width: 326px;
+      }
+
+      @media screen and (max-width: 605px) {
+        width: 90px;
       }
     }
   }
@@ -670,6 +848,15 @@ img {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 800px) {
+      margin: 0 auto;
+      width: 365px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 0;
     }
   }
 }
@@ -751,6 +938,10 @@ img {
   h3 {
     margin-top: 8px;
     color: $general;
+
+    @media screen and (max-width: 400px) {
+      font-size: 2rem;
+    }
   }
   h5 {
     margin-top: 0;
@@ -770,6 +961,12 @@ img {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
+    @media screen and (max-width: 400px) {
+      width: 80px;
+      height: 56px;
+      margin-right: 10px;
+    }
   }
 }
 
@@ -788,6 +985,14 @@ img {
     flex-direction: column;
   }
 
+  @media screen and (max-width: 650px) {
+    gap: 50px;
+  }
+
+  @media screen and (max-width: 400px) {
+    height: 900px;
+  }
+
   .footer--wrapper {
     img {
       cursor: pointer;
@@ -795,12 +1000,24 @@ img {
     display: flex;
     gap: 117px;
     align-items: flex-start;
+
+    @media screen and (max-width: 645px) {
+      display: flex;
+      gap: 117px;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 100px;
+    }
     .footer__list {
       height: 210px;
       display: flex;
       justify-content: center;
       line-height: 45px;
       gap: 88px;
+
+      @media screen and (max-width: 400px) {
+        gap: 45px;
+      }
     }
     h5 {
       margin-top: 0px;
@@ -859,6 +1076,10 @@ img {
         color: white;
         :focus {
           padding: 1px;
+        }
+
+        @media screen and (max-width: 400px) {
+          width: 250px;
         }
       }
 

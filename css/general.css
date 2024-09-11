@@ -102,13 +102,37 @@ p {
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 561px;
+}
+@media screen and (max-width: 1410px) {
+  .home__nav {
+    justify-content: space-around;
+    gap: 0px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .home__nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 .home__nav--content {
   gap: 40px;
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 640px) {
+  .home__nav--content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
 }
 .home__nav--content :nth-child(1) {
   color: black;
@@ -156,9 +180,19 @@ p {
 }
 @media screen and (max-width: 1410px) {
   .home--section .Content .image .center--text {
-    width: 1004px;
-    width: 95%;
+    width: 76%;
     justify-content: center;
+  }
+}
+@media screen and (max-width: 1310px) {
+  .home--section .Content .image .center--text {
+    width: 76%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  .home--section .Content .image .center--text {
+    text-align: center;
   }
 }
 .home--section .Content .image .center--text .button {
@@ -176,15 +210,40 @@ p {
   margin-top: 124px;
   display: flex;
 }
+@media screen and (max-width: 400px) {
+  .home--section .Content .image .center--text__text__earth {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 .home--section .Content .image .center--text p {
   margin-top: 0;
   color: #fff;
   font-size: 6.4rem;
   line-height: 76px;
 }
+@media screen and (max-width: 820px) {
+  .home--section .Content .image .center--text p {
+    font-size: 5rem;
+    width: 489px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .home--section .Content .image .center--text p {
+    width: 360px;
+  }
+}
 .home--section .Content .image .center--text .Content__earth--click {
   display: flex;
   gap: 24px;
+}
+@media screen and (max-width: 400px) {
+  .home--section .Content .image .center--text .Content__earth--click {
+    justify-content: center;
+  }
 }
 .home--section .Content .image .center--text .Content__earth--click .button {
   cursor: pointer;
@@ -197,9 +256,19 @@ p {
   align-items: center;
   font-size: 1.8rem;
 }
+@media screen and (max-width: 400px) {
+  .home--section .Content .image .center--text .stats {
+    width: 350px;
+  }
+}
 .home--section .Content .image .center--text .stats h4 {
   color: #fff;
   font-size: 1.8rem;
+}
+@media screen and (max-width: 1288px) {
+  .home--section .Content .image .center--text .stats h4 {
+    width: 64px;
+  }
 }
 .home--section .Content .image .center--text .stats--line {
   width: 861px;
@@ -211,6 +280,11 @@ p {
     width: 561px;
   }
 }
+@media screen and (max-width: 1350px) and (max-width: 820px) {
+  .home--section .Content .image .center--text .stats--line {
+    width: 200px;
+  }
+}
 
 .information {
   text-align: left;
@@ -218,6 +292,11 @@ p {
   justify-content: center;
   margin-top: 96px;
   margin-bottom: 64px;
+}
+@media screen and (max-width: 400px) {
+  .information {
+    width: 300px;
+  }
 }
 .information .things3 {
   display: flex;
@@ -227,8 +306,32 @@ p {
 .information .things3 .article--p {
   margin-bottom: 48px;
 }
+@media screen and (max-width: 400px) {
+  .information .things3 img {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .information .things3 .wrapper-2 article {
+    width: 300px;
+    margin: auto;
+  }
+}
 .information figure {
   margin-left: 0;
+}
+@media screen and (max-width: 1410px) {
+  .information figure {
+    margin-left: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .information figure {
+    margin: auto;
+  }
+  .information figure img {
+    width: 350px;
+  }
 }
 .information stats-line {
   color: black;
@@ -285,7 +388,7 @@ button {
   display: flex;
   gap: 96px;
 }
-@media screen and (max-width: 1348px) {
+@media screen and (max-width: 1410px) {
   .wrapper-2 {
     display: flex;
     gap: 0;
@@ -303,14 +406,28 @@ img {
 img :hover {
   cursor: pointer;
 }
+@media screen and (max-width: 400px) {
+  img :hover {
+    width: 350px;
+  }
+}
 
 .logos {
   gap: 96px;
   display: flex;
 }
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1410px) {
   .logos {
     width: 628px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 600px) {
+  .logos {
+    width: 134px;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -327,10 +444,25 @@ img :hover {
 .services figure {
   margin-left: 0;
 }
+@media screen and (max-width: 400px) {
+  .services figure {
+    margin: auto;
+  }
+  .services figure img {
+    width: 350px;
+    margin: auto;
+  }
+}
 .services h4 {
   color: #1d2130;
   font-size: 20px;
   margin-bottom: 0px;
+}
+@media screen and (max-width: 500px) {
+  .services h2 {
+    margin: auto;
+    width: 345px;
+  }
 }
 .services .green-square {
   display: flex;
@@ -353,6 +485,11 @@ img :hover {
   .services .services-flex {
     display: flex;
     flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 400px) {
+  .services .services-flex {
+    width: 300px;
   }
 }
 .services .services-flex .square-and-text {
@@ -393,6 +530,11 @@ img :hover {
   z-index: 0;
   border-radius: 12px;
 }
+@media screen and (max-width: 400px) {
+  .articles .shadow--block {
+    width: 350px;
+  }
+}
 .articles h2 {
   margin-left: 109px;
 }
@@ -418,6 +560,11 @@ img :hover {
   margin-left: 48px;
   position: absolute;
 }
+@media screen and (max-width: 500px) {
+  .articles .article__container article .article__one--text {
+    margin-left: 30px;
+  }
+}
 .articles .article__container article .article__one--text p {
   color: white;
   margin-bottom: 64px;
@@ -437,6 +584,11 @@ img :hover {
   height: 421px;
   border-radius: 12px;
 }
+@media screen and (max-width: 400px) {
+  .articles .tree--image {
+    width: 350px;
+  }
+}
 .articles .city--image {
   height: 80rem;
   background-image: url("../images/project-2.png");
@@ -446,6 +598,11 @@ img :hover {
   width: 411px;
   height: 421px;
   border-radius: 12px;
+}
+@media screen and (max-width: 400px) {
+  .articles .city--image {
+    width: 350px;
+  }
 }
 .articles .city--image .shadow--block {
   width: 411px;
@@ -464,6 +621,11 @@ img :hover {
   width: 411px;
   height: 421px;
   border-radius: 12px;
+}
+@media screen and (max-width: 400px) {
+  .articles .Wildlife--image {
+    width: 350px;
+  }
 }
 
 .Donations {
@@ -493,6 +655,14 @@ img :hover {
   .Donations .black__content {
     gap: 20px;
   }
+}
+@media screen and (max-width: 1300px) and (max-width: 400px) {
+  .Donations .black__content {
+    text-align: center;
+    width: 350px;
+  }
+}
+@media screen and (max-width: 1300px) {
   .Donations .black__content h2 {
     font-size: 3rem;
   }
@@ -523,6 +693,11 @@ img :hover {
 .Donations .black .spending .helping {
   background-color: #fff0ca;
 }
+@media screen {
+  .Donations .black .spending {
+    max-width: 400px;
+  }
+}
 .Donations .black .spending--2 {
   display: flex;
   gap: 24px;
@@ -552,7 +727,11 @@ img :hover {
   .Donations img {
     width: 300px;
     height: 300px;
-    margin-right: 35px;
+  }
+}
+@media screen and (max-width: 1300px) and (max-width: 800px) {
+  .Donations img {
+    width: 0;
   }
 }
 
@@ -572,6 +751,17 @@ img :hover {
 .contribute h2 {
   margin-top: 0;
 }
+@media screen and (max-width: 660px) {
+  .contribute h2 {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  .contribute h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
 .contribute__content {
   display: flex;
   width: 100%;
@@ -579,6 +769,11 @@ img :hover {
   align-items: center;
   z-index: 1;
   flex-direction: column;
+}
+@media screen and (max-width: 400px) {
+  .contribute__content {
+    text-align: center;
+  }
 }
 .contribute__content--buttons {
   gap: 32px;
@@ -618,6 +813,11 @@ img :hover {
 .news .header .roboto-medium {
   font-size: 4rem;
 }
+@media screen and (max-width: 605px) {
+  .news .header .roboto-medium {
+    width: 170px;
+  }
+}
 .news .header .long-line {
   width: 981px;
   height: 1px;
@@ -625,6 +825,11 @@ img :hover {
 @media screen and (max-width: 1440px) {
   .news .header .long-line {
     width: 326px;
+  }
+}
+@media screen and (max-width: 605px) {
+  .news .header .long-line {
+    width: 90px;
   }
 }
 .news .news__articles {
@@ -646,6 +851,16 @@ img :hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 800px) {
+  .news .news__articles {
+    margin: 0 auto;
+    width: 365px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 0;
   }
 }
 
@@ -721,6 +936,11 @@ img :hover {
   margin-top: 8px;
   color: #1d2130;
 }
+@media screen and (max-width: 400px) {
+  .event h3 {
+    font-size: 2rem;
+  }
+}
 .event h5 {
   margin-top: 0;
   font-size: 1.6rem;
@@ -740,6 +960,13 @@ img :hover {
   justify-content: center;
   cursor: pointer;
 }
+@media screen and (max-width: 400px) {
+  .event .button {
+    width: 80px;
+    height: 56px;
+    margin-right: 10px;
+  }
+}
 
 .footer {
   gap: 143px;
@@ -757,6 +984,16 @@ img :hover {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 650px) {
+  .footer {
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .footer {
+    height: 900px;
+  }
+}
 .footer .footer--wrapper {
   display: flex;
   gap: 117px;
@@ -765,12 +1002,26 @@ img :hover {
 .footer .footer--wrapper img {
   cursor: pointer;
 }
+@media screen and (max-width: 645px) {
+  .footer .footer--wrapper {
+    display: flex;
+    gap: 117px;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+}
 .footer .footer--wrapper .footer__list {
   height: 210px;
   display: flex;
   justify-content: center;
   line-height: 45px;
   gap: 88px;
+}
+@media screen and (max-width: 400px) {
+  .footer .footer--wrapper .footer__list {
+    gap: 45px;
+  }
 }
 .footer .footer--wrapper h5 {
   margin-top: 0px;
@@ -823,6 +1074,11 @@ img :hover {
 }
 .footer .Subscribe .Subscribe__email .email :focus {
   padding: 1px;
+}
+@media screen and (max-width: 400px) {
+  .footer .Subscribe .Subscribe__email .email {
+    width: 250px;
+  }
 }
 .footer .Subscribe .Subscribe__email button {
   margin-top: 0;
